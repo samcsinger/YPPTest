@@ -49,6 +49,13 @@ body {
   height: 56px;
 }
 
+.role-chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--ypp-lavender);
+  color: var(--ypp-purple);
+  font-weight: 600;
+  font-size: 13px;
 .role-tabs {
   display: flex;
   gap: 12px;
@@ -99,6 +106,37 @@ body {
 }
 
 .main-content {
+  gap: 24px;
+  padding: 32px;
+  display: grid;
+}
+
+.primary-tabs {
+  display: flex;
+  gap: 12px;
+  padding: 0 32px 18px;
+  border-bottom: 1px solid var(--ypp-border);
+  background: #ffffff;
+  position: sticky;
+  top: 86px;
+  z-index: 9;
+  flex-wrap: wrap;
+}
+
+.primary-tab {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: var(--ypp-lavender);
+  color: var(--ypp-purple);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.primary-tab.active {
+  background: var(--ypp-purple);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(76, 68, 204, 0.25);
   display: grid;
   grid-template-columns: 260px 1fr;
   gap: 24px;
@@ -176,6 +214,68 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+.section-block {
+  display: grid;
+  gap: 16px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.section-header h2 {
+  margin: 0;
+}
+
+.panel-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.form-grid label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--ypp-ink);
+}
+
+.form-grid input,
+.form-grid textarea {
+  border-radius: 10px;
+  border: 1px solid var(--ypp-border);
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.form-grid .span-two {
+  grid-column: span 2;
+}
+
+.upload {
+  display: grid;
+  gap: 6px;
+  margin: 12px 0;
+  font-weight: 600;
+  color: var(--ypp-ink);
+}
+
+.upload input {
+  border-radius: 10px;
+  border: 1px solid var(--ypp-border);
+  padding: 10px 12px;
+  font: inherit;
+}
 .card {
   background: #ffffff;
   border-radius: 18px;
@@ -398,5 +498,9 @@ body {
 
   .auth-side {
     order: -1;
+  }
+
+  .form-grid .span-two {
+    grid-column: span 1;
   }
 }
