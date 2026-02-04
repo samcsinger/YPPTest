@@ -1,10 +1,7 @@
 :root {
   color-scheme: light;
   --ypp-purple: #4c44cc;
-  --ypp-purple-dark: #3a2d92;
-  --ypp-purple-soft: #6a5de0;
   --ypp-lavender: #edebff;
-  --ypp-lavender-soft: #f6f4ff;
   --ypp-ink: #1c1c1c;
   --ypp-muted: #6f6f8d;
   --ypp-border: #e3e3f5;
@@ -19,9 +16,7 @@
 
 body {
   margin: 0;
-  background: radial-gradient(circle at top right, rgba(237, 235, 255, 0.9), transparent 40%),
-    radial-gradient(circle at 20% 20%, rgba(106, 93, 224, 0.2), transparent 55%),
-    linear-gradient(160deg, #ffffff 0%, #f6f4ff 45%, #f1efff 100%);
+  background: #f8f8ff;
   color: var(--ypp-ink);
 }
 
@@ -32,9 +27,8 @@ body {
 }
 
 .top-nav {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(227, 227, 245, 0.7);
+  background: #ffffff;
+  border-bottom: 1px solid var(--ypp-border);
   padding: 16px 32px;
   display: flex;
   align-items: center;
@@ -52,7 +46,8 @@ body {
 }
 
 .logo-block img {
-  height: 52px;
+  height: 60px;
+  height: 56px;
 }
 
 .role-chip {
