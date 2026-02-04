@@ -53,30 +53,10 @@ body {
 .role-chip {
   padding: 6px 12px;
   border-radius: 999px;
-  background: var(--ypp-lavender);
-  color: var(--ypp-purple);
+  background: rgba(106, 93, 224, 0.15);
+  color: var(--ypp-purple-dark);
   font-weight: 600;
   font-size: 13px;
-.role-tabs {
-  display: flex;
-  gap: 12px;
-  flex: 1;
-}
-
-.role-tab {
-  padding: 10px 16px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  background: var(--ypp-lavender);
-  color: var(--ypp-purple);
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.role-tab.active {
-  background: var(--ypp-purple);
-  color: #ffffff;
-  box-shadow: 0 6px 16px rgba(76, 68, 204, 0.25);
 }
 
 .top-actions {
@@ -88,7 +68,7 @@ body {
   padding: 10px 16px;
   border-radius: 10px;
   border: 1px solid var(--ypp-purple);
-  background: var(--ypp-purple);
+  background: linear-gradient(135deg, var(--ypp-purple), var(--ypp-purple-soft));
   color: #ffffff;
   font-weight: 600;
   text-decoration: none;
@@ -120,9 +100,9 @@ body {
 }
 
 .side-nav {
-  background: #ffffff;
-  border-radius: 18px;
-  border: 1px solid var(--ypp-border);
+  background: linear-gradient(160deg, #3a2d92 0%, #4c44cc 45%, #6a5de0 100%);
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 18px;
   display: grid;
   gap: 10px;
@@ -133,19 +113,24 @@ body {
 .side-nav h3 {
   margin: 0 0 6px;
   font-size: 16px;
+  color: #ffffff;
 }
 
 .side-link {
   text-decoration: none;
   padding: 10px 12px;
   border-radius: 12px;
-  color: var(--ypp-purple);
+  color: #ffffff;
   font-weight: 600;
-  background: #f1f1ff;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .side-link:hover {
-  background: var(--ypp-purple);
+  background: rgba(255, 255, 255, 0.3);
   color: #ffffff;
 }
 
@@ -153,8 +138,8 @@ body {
   display: flex;
   gap: 12px;
   padding: 0 32px 18px;
-  border-bottom: 1px solid var(--ypp-border);
-  background: #ffffff;
+  border-bottom: 1px solid rgba(227, 227, 245, 0.7);
+  background: rgba(255, 255, 255, 0.75);
   position: sticky;
   top: 86px;
   z-index: 9;
@@ -165,70 +150,38 @@ body {
   padding: 10px 16px;
   border-radius: 999px;
   border: 1px solid transparent;
-  background: var(--ypp-lavender);
-  color: var(--ypp-purple);
+  background: rgba(237, 235, 255, 0.8);
+  color: var(--ypp-purple-dark);
   font-weight: 600;
   text-decoration: none;
 }
 
 .primary-tab.active {
-  background: var(--ypp-purple);
+  background: linear-gradient(135deg, var(--ypp-purple), var(--ypp-purple-soft));
   color: #ffffff;
   box-shadow: 0 6px 16px rgba(76, 68, 204, 0.25);
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 24px;
-  padding: 32px;
-}
-
-.sidebar {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 20px;
-  border: 1px solid var(--ypp-border);
-  height: fit-content;
-}
-
-.sidebar h3 {
-  margin-top: 0;
-}
-
-.subtabs {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.subtab {
-  padding: 10px 12px;
-  border-radius: 12px;
-  background: #f1f1ff;
-  color: var(--ypp-purple);
-  font-weight: 600;
-}
-
-.subtab.active {
-  background: var(--ypp-purple);
-  color: #ffffff;
 }
 
 .hero {
-  background: linear-gradient(135deg, #ffffff, var(--ypp-lavender));
-  border-radius: 24px;
-  padding: 28px;
-  border: 1px solid var(--ypp-border);
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.35), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.35), transparent 40%),
+    linear-gradient(135deg, #4c44cc 0%, #6a5de0 55%, #a296ff 100%);
+  border-radius: 26px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   display: grid;
   gap: 12px;
+  color: #ffffff;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .hero p {
   margin: 0;
-  color: var(--ypp-muted);
+  color: #edeaff;
 }
 
 .badge-row {
@@ -238,11 +191,12 @@ body {
 }
 
 .badge {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 999px;
   padding: 6px 12px;
-  border: 1px solid var(--ypp-border);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   font-size: 13px;
+  color: #ffffff;
 }
 
 .grid {
@@ -316,10 +270,10 @@ body {
 }
 .card {
   background: #ffffff;
-  border-radius: 18px;
-  padding: 18px;
-  border: 1px solid var(--ypp-border);
-  box-shadow: 0 10px 30px rgba(76, 68, 204, 0.08);
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(227, 227, 245, 0.8);
+  box-shadow: 0 12px 32px rgba(76, 68, 204, 0.12);
 }
 
 .card h4 {
@@ -353,7 +307,7 @@ body {
 }
 
 .progress-bar {
-  background: #f0f0ff;
+  background: rgba(237, 235, 255, 0.9);
   border-radius: 999px;
   height: 8px;
   position: relative;
@@ -363,7 +317,7 @@ body {
 .progress-bar span {
   display: block;
   height: 100%;
-  background: var(--ypp-purple);
+  background: linear-gradient(90deg, var(--ypp-purple), var(--ypp-purple-soft));
   width: 72%;
 }
 
@@ -379,8 +333,8 @@ body {
   gap: 6px;
   padding: 6px 12px;
   border-radius: 999px;
-  background: #ffffff;
-  border: 1px solid var(--ypp-border);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(227, 227, 245, 0.8);
   font-size: 12px;
 }
 
@@ -391,7 +345,8 @@ body {
 }
 
 .auth-body {
-  background: linear-gradient(135deg, #ffffff, var(--ypp-lavender));
+  background: radial-gradient(circle at top right, rgba(106, 93, 224, 0.35), transparent 45%),
+    linear-gradient(135deg, #ffffff, var(--ypp-lavender-soft));
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -402,8 +357,8 @@ body {
   width: min(1100px, 92vw);
   background: #ffffff;
   border-radius: 24px;
-  border: 1px solid var(--ypp-border);
-  box-shadow: 0 20px 50px rgba(76, 68, 204, 0.18);
+  border: 1px solid rgba(227, 227, 245, 0.8);
+  box-shadow: 0 20px 55px rgba(76, 68, 204, 0.2);
   display: grid;
   grid-template-columns: minmax(320px, 1fr) minmax(320px, 1fr);
   overflow: hidden;
@@ -482,10 +437,25 @@ body {
 
 .auth-side {
   padding: 36px;
-  background: var(--ypp-purple);
+  background: linear-gradient(160deg, #3a2d92 0%, #4c44cc 55%, #6a5de0 100%);
   color: #ffffff;
   display: grid;
   gap: 16px;
+  position: relative;
+}
+
+.auth-side::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.22), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.18), transparent 35%);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.auth-side > * {
+  position: relative;
 }
 
 .auth-side h2 {
@@ -517,10 +487,6 @@ body {
 }
 
 @media (max-width: 960px) {
-  .main-content {
-    grid-template-columns: 1fr;
-  }
-
   .top-nav {
     flex-direction: column;
     align-items: flex-start;
@@ -532,8 +498,6 @@ body {
 
   .side-nav {
     position: static;
-  .role-tabs {
-    flex-wrap: wrap;
   }
 
   .auth-shell {
