@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YPP Admin Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-nav">
+        <div class="logo-block">
+          <div class="role-chip">Admin Portal</div>
+        </div>
+        <div class="top-actions">
+          <button class="button ghost" type="button">Notifications</button>
+          <a class="button" href="login.html">Log Out</a>
+        </div>
+      </header>
+      <nav class="primary-tabs" aria-label="Admin portal tabs">
+        <button class="primary-tab active" data-tab="people" type="button">People</button>
+      </nav>
+
+      <main class="main-content">
+        <div class="content-stack">
+          <section class="tab-section active" data-tab="people">
+            <div class="section-block">
+              <div class="section-header">
+                <h2>People</h2>
+                <span class="pill">Organization Directory</span>
+              </div>
+              <div class="panel-grid people-grid">
+                <div class="card people-list">
+                  <h4>Directory</h4>
+                  <button class="people-link active" data-person="person-instructor" type="button">
+                    Maya Johnson — Instructor
+                  </button>
+                  <button class="people-link" data-person="person-admin" type="button">
+                    Renee Walker — Admin
+                  </button>
+                </div>
+                <div class="card people-detail">
+                  <div id="person-instructor" class="person-panel active">
+                    <div class="section-header">
+                      <h3>Maya Johnson (Instructor)</h3>
+                      <span class="pill">Northside STEM Chapter</span>
+                    </div>
+                    <div class="panel-grid">
+                      <div class="card">
+                        <h4>Curriculum</h4>
+                        <p class="highlight">Latest submission: Creative Coding 101 v2.1</p>
+                        <ul class="list">
+                          <li>Curriculum Link: ypp.org/curriculum/maya</li>
+                          <li>Last review: Sept 10</li>
+                          <li>Status: Approved with minor edits</li>
+                        </ul>
+                      </div>
+                      <div class="card">
+                        <h4>Chapter President Feedback</h4>
+                        <p class="highlight">“Excellent classroom energy. Focus on pacing.”</p>
+                        <ul class="list">
+                          <li>Observation date: Sept 7</li>
+                          <li>Reviewer: CP Jordan Reese</li>
+                        </ul>
+                      </div>
+                      <div class="card">
+                        <h4>Parent Feedback</h4>
+                        <p class="highlight">Average rating: 4.7 / 5</p>
+                        <ul class="list">
+                          <li>Top note: “Students feel seen and supported.”</li>
+                          <li>Latest survey: Sept 5</li>
+                        </ul>
+                      </div>
+                      <div class="card">
+                        <h4>Past Mentorship Evaluations</h4>
+                        <ul class="list">
+                          <li>August: On track in curriculum delivery</li>
+                          <li>July: Getting started on community showcase</li>
+                          <li>June: Above and beyond in student retention</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="section-block">
+                      <div class="section-header">
+                        <h3>Submit New Mentorship Evaluation</h3>
+                        <span class="pill">Mentor-only</span>
+                      </div>
+                      <div class="mentorship-layout">
+                        <div class="card progress-update">
+                          <div class="progress-meta">
+                            <div>
+                              <strong>Leader:</strong> Dr. Lauren Kim
+                            </div>
+                            <div>
+                              <strong>Class of:</strong> 2026
+                            </div>
+                            <div>
+                              <strong>Position:</strong> Instructor
+                            </div>
+                            <div>
+                              <strong>Start Month:</strong> March
+                            </div>
+                            <div>
+                              <strong>This Month:</strong> September
+                            </div>
+                            <div>
+                              <strong>Months in Role:</strong> 7
+                            </div>
+                            <div>
+                              <strong>Day-to-Day Manager:</strong> Jordan Reese
+                            </div>
+                            <div>
+                              <strong>Mentor:</strong> Dr. Lauren Kim
+                            </div>
+                          </div>
+                          <h4>Progress Update</h4>
+                          <div class="progress-scale">
+                            <div>
+                              <strong class="scale-label status-red">Behind schedule</strong>
+                              <span>Incomplete/behind timetable; not possible until catch-up possible</span>
+                            </div>
+                            <div>
+                              <strong class="scale-label status-yellow">Getting started</strong>
+                              <span>Incomplete/behind timetable but catch-up possible</span>
+                            </div>
+                            <div>
+                              <strong class="scale-label status-green">On track</strong>
+                              <span>Complete/in line schedule in both quantity &amp; quality</span>
+                            </div>
+                            <div>
+                              <strong class="scale-label status-purple">Above and beyond</strong>
+                              <span>Exceeding goals in quantity &amp; quality</span>
+                            </div>
+                          </div>
+                          <div class="progress-table">
+                            <div class="progress-row">
+                              <div class="progress-label">Goal 1<br /><span>By Timetable 1</span></div>
+                              <div class="progress-bar" style="--progress: 70%;">
+                                <span class="progress-fill status-green"></span>
+                              </div>
+                            </div>
+                            <div class="progress-row">
+                              <div class="progress-label">Goal 2<br /><span>By Timetable 2</span></div>
+                              <div class="progress-bar" style="--progress: 55%;">
+                                <span class="progress-fill status-yellow"></span>
+                              </div>
+                            </div>
+                            <div class="progress-row">
+                              <div class="progress-label">Goal 3<br /><span>By Timetable 3</span></div>
+                              <div class="progress-bar" style="--progress: 85%;">
+                                <span class="progress-fill status-purple"></span>
+                              </div>
+                            </div>
+                            <div class="progress-row">
+                              <div class="progress-label">Goal 4<br /><span>By Timetable 4</span></div>
+                              <div class="progress-bar" style="--progress: 45%;">
+                                <span class="progress-fill status-yellow"></span>
+                              </div>
+                            </div>
+                            <div class="progress-row">
+                              <div class="progress-label">Goal 5<br /><span>By Timetable 5</span></div>
+                              <div class="progress-bar" style="--progress: 78%;">
+                                <span class="progress-fill status-green"></span>
+                              </div>
+                            </div>
+                            <div class="progress-row">
+                              <div class="progress-label">Overall<br /><span>Including general expectations</span></div>
+                              <div class="progress-bar" style="--progress: 62%;">
+                                <span class="progress-fill status-green"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="progress-comments">
+                            <h5>Comments:</h5>
+                            <p>
+                              Overall impression of progress, what’s worked well and recommended adjustments,
+                              relevant notes from/about colleagues, additional involvements in YPP (events,
+                              recruiting, etc.) [projected future path at YPP and Achievement Awards (as of last
+                              EC review)]
+                            </p>
+                            <textarea rows="3" placeholder="Enter mentor comments."></textarea>
+                          </div>
+                        </div>
+                        <div class="mentorship-side">
+                          <div class="card happiness-card">
+                            <h4>Your Happiness in YPP</h4>
+                            <label class="rating-label">How happy are you at YPP? (bold one)</label>
+                            <div class="rating-scale">
+                              <label><input type="radio" name="admin-happiness" /> 1</label>
+                              <label><input type="radio" name="admin-happiness" /> 2</label>
+                              <label><input type="radio" name="admin-happiness" /> 3</label>
+                              <label><input type="radio" name="admin-happiness" /> 4</label>
+                              <label><input type="radio" name="admin-happiness" /> 5</label>
+                            </div>
+                            <label>
+                              What did you accomplish this month?
+                              <textarea rows="2" placeholder="Record key accomplishments."></textarea>
+                            </label>
+                            <label>
+                              How was your experience with the people you worked with?
+                              <textarea rows="2" placeholder="Record collaboration notes."></textarea>
+                            </label>
+                            <label>
+                              What’s working well for you?
+                              <textarea rows="2" placeholder="Record what's working."></textarea>
+                            </label>
+                            <label>
+                              What support or changes would help you succeed in this role and beyond YPP?
+                              <textarea rows="2" placeholder="Record support needs."></textarea>
+                            </label>
+                          </div>
+                          <div class="card action-plan-card">
+                            <h4>Future Plan of Action</h4>
+                            <label>
+                              Revisions to future goals (major vision-level changes should be discussed with the
+                              Executive Committee):
+                              <textarea rows="3" placeholder="Describe revisions to future goals."></textarea>
+                            </label>
+                            <label>
+                              Action Items and Implementation Plan (for larger goals, include specific subgoals
+                              not yet achieved and action plan to achieve them):
+                              <textarea rows="3" placeholder="List action items and implementation plan."></textarea>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="button">Submit Evaluation</button>
+                    </div>
+                  </div>
+                  <div id="person-admin" class="person-panel">
+                    <div class="section-header">
+                      <h3>Renee Walker (Admin)</h3>
+                      <span class="pill">Super Admin</span>
+                    </div>
+                    <p class="highlight">Admin access includes full CMS and people management.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        Youth Passion Project Admin Portal · Role-based access · Email/password authentication ·
+        Guiding the stars of tomorrow.
+      </footer>
+    </div>
+    <script>
+      const tabButtons = document.querySelectorAll(".primary-tab");
+      const tabSections = document.querySelectorAll(".tab-section");
+
+      const activateTab = (tabName) => {
+        tabButtons.forEach((button) => {
+          button.classList.toggle("active", button.dataset.tab === tabName);
+        });
+        tabSections.forEach((section) => {
+          section.classList.toggle("active", section.dataset.tab === tabName);
+        });
+      };
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => activateTab(button.dataset.tab));
+      });
+
+      const peopleLinks = document.querySelectorAll(".people-link");
+      const peoplePanels = document.querySelectorAll(".person-panel");
+
+      peopleLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          const panelId = link.dataset.person;
+          peopleLinks.forEach((item) => item.classList.toggle("active", item === link));
+          peoplePanels.forEach((panel) =>
+            panel.classList.toggle("active", panel.id === panelId)
+          );
+        });
+      });
+
+      activateTab("people");
+    </script>
+  </body>
+</html>
