@@ -394,6 +394,10 @@ html {
   overflow: hidden;
 }
 
+.progress-bar.is-clickable {
+  cursor: pointer;
+}
+
 .progress-bar::before {
   content: "";
   position: absolute;
@@ -589,12 +593,13 @@ button:disabled {
 
 .people-grid {
   grid-template-columns: minmax(200px, 260px) 1fr;
+  align-items: start;
 }
 
 .people-link {
   border: 1px solid var(--ypp-border);
-  border-radius: 12px;
-  padding: 8px 10px;
+  border-radius: 10px;
+  padding: 6px 8px;
   background: #f6f4ff;
   color: var(--ypp-purple-dark);
   font-weight: 600;
@@ -612,6 +617,7 @@ button:disabled {
 .people-detail {
   display: grid;
   gap: 12px;
+  align-self: start;
 }
 
 .person-panel {

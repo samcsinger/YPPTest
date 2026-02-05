@@ -73,7 +73,7 @@
                       </div>
                       <div class="card">
                         <h4>Past Mentorship Evaluations</h4>
-                        <ul class="list">
+                        <ul class="list" id="past-evaluations">
                           <li>August: On track in curriculum delivery</li>
                           <li>July: Getting started on community showcase</li>
                           <li>June: Above and beyond in student retention</li>
@@ -135,37 +135,37 @@
                           <div class="progress-table">
                             <div class="progress-row">
                               <div class="progress-label">Goal 1<br /><span>By Timetable 1</span></div>
-                              <div class="progress-bar" style="--progress: 70%;">
+                              <div class="progress-bar is-clickable" style="--progress: 70%;">
                                 <span class="progress-fill status-green"></span>
                               </div>
                             </div>
                             <div class="progress-row">
                               <div class="progress-label">Goal 2<br /><span>By Timetable 2</span></div>
-                              <div class="progress-bar" style="--progress: 55%;">
+                              <div class="progress-bar is-clickable" style="--progress: 55%;">
                                 <span class="progress-fill status-yellow"></span>
                               </div>
                             </div>
                             <div class="progress-row">
                               <div class="progress-label">Goal 3<br /><span>By Timetable 3</span></div>
-                              <div class="progress-bar" style="--progress: 85%;">
+                              <div class="progress-bar is-clickable" style="--progress: 85%;">
                                 <span class="progress-fill status-purple"></span>
                               </div>
                             </div>
                             <div class="progress-row">
                               <div class="progress-label">Goal 4<br /><span>By Timetable 4</span></div>
-                              <div class="progress-bar" style="--progress: 45%;">
+                              <div class="progress-bar is-clickable" style="--progress: 45%;">
                                 <span class="progress-fill status-yellow"></span>
                               </div>
                             </div>
                             <div class="progress-row">
                               <div class="progress-label">Goal 5<br /><span>By Timetable 5</span></div>
-                              <div class="progress-bar" style="--progress: 78%;">
+                              <div class="progress-bar is-clickable" style="--progress: 78%;">
                                 <span class="progress-fill status-green"></span>
                               </div>
                             </div>
                             <div class="progress-row">
                               <div class="progress-label">Overall<br /><span>Including general expectations</span></div>
-                              <div class="progress-bar" style="--progress: 62%;">
+                              <div class="progress-bar is-clickable" style="--progress: 62%;">
                                 <span class="progress-fill status-green"></span>
                               </div>
                             </div>
@@ -178,7 +178,7 @@
                               recruiting, etc.) [projected future path at YPP and Achievement Awards (as of last
                               EC review)]
                             </p>
-                            <textarea rows="3" placeholder="Enter mentor comments."></textarea>
+                            <textarea rows="3" id="mentor-comments" placeholder="Enter mentor comments."></textarea>
                           </div>
                         </div>
                         <div class="mentorship-side">
@@ -224,7 +224,7 @@
                           </div>
                         </div>
                       </div>
-                      <button class="button">Submit Evaluation</button>
+                      <button class="button" id="submit-evaluation" type="button">Submit Evaluation</button>
                     </div>
                   </div>
                   <div id="person-admin" class="person-panel">
@@ -274,6 +274,33 @@
             panel.classList.toggle("active", panel.id === panelId)
           );
         });
+      });
+
+      const clickableBars = document.querySelectorAll(".progress-bar.is-clickable");
+      clickableBars.forEach((bar) => {
+        bar.addEventListener("click", (event) => {
+          const rect = bar.getBoundingClientRect();
+          const percent = Math.min(100, Math.max(0, ((event.clientX - rect.left) / rect.width) * 100));
+          bar.style.setProperty("--progress", `${percent.toFixed(0)}%`);
+        });
+      });
+
+      const submitButton = document.getElementById("submit-evaluation");
+      const evaluationsList = document.getElementById("past-evaluations");
+      const mentorComments = document.getElementById("mentor-comments");
+
+      submitButton.addEventListener("click", () => {
+        const date = new Date();
+        const monthLabel = date.toLocaleString("default", { month: "long" });
+        const comment = mentorComments.value.trim();
+        const summary = comment
+          ? `${monthLabel}: ${comment.slice(0, 60)}${comment.length > 60 ? "…" : ""}`
+          : `${monthLabel}: New mentorship evaluation submitted`;
+
+        const listItem = document.createElement("li");
+        listItem.textContent = summary;
+        evaluationsList.prepend(listItem);
+        mentorComments.value = "";
       });
 
       activateTab("people");
