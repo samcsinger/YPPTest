@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youth Passion Project Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-nav">
+        <div class="logo-block">
+          <img src="assets/ypp-logo.svg" alt="Youth Passion Project logo" />
+          <div class="role-chip">Instructor Portal</div>
+        </div>
+        <div class="top-actions">
+          <button class="button ghost">Notifications</button>
+          <a class="button" href="login.html">Log Out</a>
+        </div>
+      </header>
+      <nav class="primary-tabs" aria-label="Instructor portal tabs">
+        <a class="primary-tab active" href="#profile">Profile</a>
+        <a class="primary-tab" href="#training">Training & Curriculum</a>
+        <a class="primary-tab" href="#courses">Courses</a>
+        <a class="primary-tab" href="#mentorship">Mentorship</a>
+        <a class="primary-tab" href="#community">Community</a>
+        <a class="primary-tab" href="#special-programming">Special Programming</a>
+        <a class="primary-tab" href="#alumni">Alumni & Advisors</a>
+      </nav>
+
+      <main class="main-content">
+        <aside class="side-nav">
+          <h3>Instructor Menu</h3>
+          <a class="side-link" href="#profile">Profile</a>
+          <a class="side-link" href="#training">Training & Curriculum</a>
+          <a class="side-link" href="#courses">Courses</a>
+          <a class="side-link" href="#mentorship">Mentorship</a>
+          <a class="side-link" href="#community">Community</a>
+          <a class="side-link" href="#special-programming">Special Programming</a>
+          <a class="side-link" href="#alumni">Alumni & Advisors</a>
+        </aside>
+        <div class="content-stack">
+          <section class="section-block hero">
+          <div>
+            <h1>Welcome back, Instructor Maya!</h1>
+            <p>
+              Here is your personalized portal for guiding the stars of tomorrow. Each tab below
+              maps to a complete workflow for your instructor role.
+            </p>
+          </div>
+          <div class="badge-row">
+            <span class="badge">Chapter: Northside STEM</span>
+            <span class="badge">Mentor: Dr. Lauren Kim</span>
+            <span class="badge">Status: Active Instructor</span>
+            <span class="badge">Next Interview Slot: Aug 12, 4:00 PM</span>
+          </div>
+          </section>
+
+          <section id="profile" class="section-block">
+          <div class="section-header">
+            <h2>Instructor Profile</h2>
+            <span class="pill">Editable by Instructor</span>
+          </div>
+          <div class="panel-grid">
+            <div class="card">
+              <h4>Biographical Information</h4>
+              <form class="form-grid">
+                <label>
+                  Full Name
+                  <input type="text" value="Maya Johnson" />
+                </label>
+                <label>
+                  Email
+                  <input type="email" value="maya@ypp.org" />
+                </label>
+                <label>
+                  Phone
+                  <input type="tel" value="(555) 201-3341" />
+                </label>
+                <label class="span-two">
+                  Bio
+                  <textarea rows="3">I love helping students build creative tech projects.</textarea>
+                </label>
+              </form>
+              <button class="button">Save Profile</button>
+            </div>
+            <div class="card">
+              <h4>Instructor Details</h4>
+              <ul class="list">
+                <li>Course: Creative Coding 101</li>
+                <li>Mentor: Dr. Lauren Kim</li>
+                <li>Curriculum Link: ypp.org/curriculum/maya</li>
+              </ul>
+              <label class="upload">
+                Upload updated resume or bio
+                <input type="file" />
+              </label>
+              <button class="button ghost">Submit Update</button>
+            </div>
+          </div>
+          <div class="card">
+            <h4>Admin Announcements</h4>
+            <p class="highlight">New: Submit your fall curriculum updates by August 30.</p>
+          </div>
+          </section>
+
+          <section id="training" class="section-block">
+          <div class="section-header">
+            <h2>Training & Curriculum</h2>
+            <span class="pill">Instructor Training Program</span>
+          </div>
+          <div class="panel-grid">
+            <div class="card">
+              <h4>Training Checklist</h4>
+              <ul class="list">
+                <li>Module 1: YPP Mission & Values ✅</li>
+                <li>Module 2: Youth Safety ✅</li>
+                <li>Module 3: Lesson Planning ✅</li>
+                <li>Module 4: Classroom Practice ✅</li>
+                <li>Module 5: Accessibility ⏳</li>
+                <li>Module 6: Assessment ⏳</li>
+              </ul>
+              <button class="button ghost">Resume Training</button>
+            </div>
+            <div class="card">
+              <h4>Curriculum Submission</h4>
+              <form class="form-grid">
+                <label class="span-two">
+                  Curriculum Link
+                  <input type="url" placeholder="https://..." />
+                </label>
+                <label class="span-two">
+                  Upload Lesson Plan
+                  <input type="file" />
+                </label>
+                <label class="span-two">
+                  Notes to Admin
+                  <textarea rows="3" placeholder="Add any context for reviewers."></textarea>
+                </label>
+              </form>
+              <button class="button">Submit Curriculum</button>
+            </div>
+          </div>
+          <div class="card">
+            <h4>Feedback & Revisions</h4>
+            <p class="highlight">
+              Feedback received: “Strengthen assessment criteria for week 3 and add a rubric.”
+            </p>
+            <button class="button ghost">Upload Revision</button>
+          </div>
+          </section>
+
+          <section id="courses" class="section-block">
+          <div class="section-header">
+            <h2>Courses</h2>
+            <span class="pill">Enrollment & Feedback</span>
+          </div>
+          <div class="panel-grid">
+            <div class="card">
+              <h4>Student Enrollment</h4>
+              <ul class="list">
+                <li>Creative Coding 101 — 18 students</li>
+                <li>Engineering Pathways — 12 students</li>
+              </ul>
+              <label class="upload">
+                Upload roster update
+                <input type="file" />
+              </label>
+            </div>
+            <div class="card">
+              <h4>Parent Feedback</h4>
+              <p class="highlight">Average rating: 4.7 / 5</p>
+              <textarea rows="3" placeholder="Write a response or follow-up note."></textarea>
+              <button class="button ghost">Send Response</button>
+            </div>
+          </div>
+          </section>
+
+          <section id="mentorship" class="section-block">
+          <div class="section-header">
+            <h2>Mentorship</h2>
+            <span class="pill">Goals • Reflections • Feedback</span>
+          </div>
+          <div class="panel-grid">
+            <div class="card">
+              <h4>Mentor Contact</h4>
+              <p class="highlight">Dr. Lauren Kim · lauren@ypp.org · (555) 220-9801</p>
+              <button class="button ghost">Message Mentor</button>
+            </div>
+            <div class="card">
+              <h4>Instructor Goals</h4>
+              <ul class="list">
+                <li>Goal 1: Increase student retention to 90%</li>
+                <li>Goal 2: Launch one community showcase per term</li>
+                <li>Chapter goal: Build parent volunteer pipeline</li>
+              </ul>
+            </div>
+          </div>
+          <div class="panel-grid">
+            <div class="card">
+              <h4>Monthly Reflection Form</h4>
+              <form class="form-grid">
+                <label class="span-two">
+                  How are you feeling about your performance?
+                  <textarea rows="2" placeholder="Share wins and challenges."></textarea>
+                </label>
+                <label class="span-two">
+                  Happiness check-in (1-5)
+                  <input type="number" min="1" max="5" placeholder="4" />
+                </label>
+                <label class="span-two">
+                  Support needed
+                  <textarea rows="2" placeholder="Let admin/mentor know what you need."></textarea>
+                </label>
+              </form>
+              <button class="button">Submit Reflection</button>
+            </div>
+            <div class="card">
+              <h4>Mentor Feedback (Progress + Comments)</h4>
+              <div class="progress-card">
+                <div class="progress-header">
+                  <strong>Goal 1: Increase student retention to 90%</strong>
+                  <span class="status-pill status-green">Green: On Track</span>
+                </div>
+                <div class="progress-track" role="img" aria-label="Goal 1 progress status in green band">
+                  <span class="progress-segment status-red"></span>
+                  <span class="progress-segment status-yellow"></span>
+                  <span class="progress-segment status-green active"></span>
+                  <span class="progress-segment status-purple"></span>
+                </div>
+                <small>Comment: “Weekly check-ins are improving retention.”</small>
+              </div>
+              <div class="progress-card">
+                <div class="progress-header">
+                  <strong>Goal 2: Launch one community showcase per term</strong>
+                  <span class="status-pill status-yellow">Yellow: Needs Support</span>
+                </div>
+                <div class="progress-track" role="img" aria-label="Goal 2 progress status in yellow band">
+                  <span class="progress-segment status-red"></span>
+                  <span class="progress-segment status-yellow active"></span>
+                  <span class="progress-segment status-green"></span>
+                  <span class="progress-segment status-purple"></span>
+                </div>
+                <small>Comment: “Schedule the showcase date and confirm venue.”</small>
+              </div>
+              <div class="progress-card">
+                <div class="progress-header">
+                  <strong>Chapter Goal: Build parent volunteer pipeline</strong>
+                  <span class="status-pill status-purple">Purple: Exceeding</span>
+                </div>
+                <div class="progress-track" role="img" aria-label="Chapter goal progress status in purple band">
+                  <span class="progress-segment status-red"></span>
+                  <span class="progress-segment status-yellow"></span>
+                  <span class="progress-segment status-green"></span>
+                  <span class="progress-segment status-purple active"></span>
+                </div>
+                <small>Comment: “Three new parent leads joined the outreach circle.”</small>
+              </div>
+              <div class="highlight">
+                Overall comment: “Keep highlighting student curiosity during labs.”
+              </div>
+            </div>
+          </div>
+          </section>
+
+          <section id="community" class="section-block">
+          <div class="section-header">
+            <h2>Community</h2>
+            <span class="pill">Events & Programming</span>
+          </div>
+          <div class="card">
+            <ul class="list">
+              <li>YPP Community Town Hall — Virtual</li>
+              <li>Passion Lab Showcase — Sept 12</li>
+              <li>Instructor Circle — Thursdays, 6 PM</li>
+            </ul>
+            <button class="button ghost">RSVP</button>
+          </div>
+          </section>
+
+          <section id="special-programming" class="section-block">
+          <div class="section-header">
+            <h2>Special Programming</h2>
+            <span class="pill">Sequenced Classes & Opportunities</span>
+          </div>
+          <div class="panel-grid">
+            <div class="card">
+              <h4>Submit Virtual Programming</h4>
+              <form class="form-grid">
+                <label class="span-two">
+                  Interest Area
+                  <input type="text" placeholder="Creative Tech" />
+                </label>
+                <label class="span-two">
+                  Program Description
+                  <textarea rows="3" placeholder="Describe the sequenced classes or experience."></textarea>
+                </label>
+                <label class="span-two">
+                  Upload Outline
+                  <input type="file" />
+                </label>
+              </form>
+              <button class="button">Submit Program</button>
+            </div>
+            <div class="card">
+              <h4>Existing Programs</h4>
+              <ul class="list">
+                <li>Passion Lab: Sustainable Design (Virtual)</li>
+                <li>Competition Prep Workshop</li>
+                <li>Creative Tech Mentorship Sessions</li>
+              </ul>
+            </div>
+          </div>
+          </section>
+
+          <section id="alumni" class="section-block">
+          <div class="section-header">
+            <h2>Alumni & Advisors</h2>
+            <span class="pill">Awards Required</span>
+          </div>
+          <div class="panel-grid">
+            <div class="card">
+              <h4>Alumni Directory</h4>
+              <p>
+                Alumni programming is available to instructors who receive the Bronze Instructor
+                Award.
+              </p>
+              <button class="button ghost">View Eligibility</button>
+            </div>
+            <div class="card">
+              <h4>College Advisors</h4>
+              <p>
+                College Advisors are available to instructors who receive the Silver Instructor
+                Award.
+              </p>
+              <button class="button ghost">Request Advisor</button>
+            </div>
+          </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        Youth Passion Project Portal · Role-based access · Email/password authentication ·
+        Admin tools for CMS-style updates
+      </footer>
+    </div>
+  </body>
+</html>
