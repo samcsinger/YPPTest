@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YPP Admin Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-nav">
+        <div class="logo-block">
+          <div class="role-chip">Admin Portal</div>
+        </div>
+        <div class="top-actions">
+          <button class="button ghost" type="button">Notifications</button>
+          <a class="button" href="login.html">Log Out</a>
+        </div>
+      </header>
+      <nav class="primary-tabs" aria-label="Admin portal tabs">
+        <button class="primary-tab active" data-tab="people" type="button">People</button>
+      </nav>
+
+      <main class="main-content">
+        <div class="content-stack">
+          <section class="tab-section active" data-tab="people">
+            <div class="section-block">
+              <div class="section-header">
+                <h2>People</h2>
+                <span class="pill">Organization Directory</span>
+              </div>
+              <div class="panel-grid people-grid">
+                <div class="card people-list">
+                  <h4>Directory</h4>
+                  <button class="people-link active" data-person="person-instructor" type="button">
+                    Maya Johnson — Instructor
+                  </button>
+                  <button class="people-link" data-person="person-admin" type="button">
+                    Renee Walker — Admin
+                  </button>
+                </div>
+                <div class="card people-detail">
+                  <div id="person-instructor" class="person-panel active">
+                    <div class="section-header">
+                      <h3>Maya Johnson (Instructor)</h3>
+                      <span class="pill">Northside STEM Chapter</span>
+                    </div>
+                    <div class="panel-grid">
+                      <div class="card">
+                        <h4>Curriculum</h4>
+                        <p class="highlight">Latest submission: Creative Coding 101 v2.1</p>
+                        <ul class="list">
+                          <li>Curriculum Link: ypp.org/curriculum/maya</li>
+                          <li>Last review: Sept 10</li>
+                          <li>Status: Approved with minor edits</li>
+                        </ul>
+                      </div>
+                      <div class="card">
+                        <h4>Chapter President Feedback</h4>
+                        <p class="highlight">“Excellent classroom energy. Focus on pacing.”</p>
+                        <ul class="list">
+                          <li>Observation date: Sept 7</li>
+                          <li>Reviewer: CP Jordan Reese</li>
+                        </ul>
+                      </div>
+                      <div class="card">
+                        <h4>Parent Feedback</h4>
+                        <p class="highlight">Average rating: 4.7 / 5</p>
+                        <ul class="list">
+                          <li>Top note: “Students feel seen and supported.”</li>
+                          <li>Latest survey: Sept 5</li>
+                        </ul>
+                      </div>
+                      <div class="card">
+                        <h4>Past Mentorship Evaluations</h4>
+                        <ul class="list" id="past-evaluations"></ul>
+                      </div>
+                    </div>
+                      <div class="section-block">
+                        <div class="section-header">
+                          <h3>Submit New Mentorship Evaluation</h3>
+                          <span class="pill">Mentor-only</span>
+                        </div>
+                      <div class="card">
+                        <h4>Instructor Happiness Survey Response</h4>
+                        <div class="response-grid">
+                          <div>
+                            <strong>Happiness rating:</strong>
+                            <span id="admin-happiness-rating">Not submitted yet</span>
+                          </div>
+                          <div>
+                            <strong>Accomplishments:</strong>
+                            <span id="admin-happiness-accomplishments">Not submitted yet</span>
+                          </div>
+                          <div>
+                            <strong>Collaboration experience:</strong>
+                            <span id="admin-happiness-collaboration">Not submitted yet</span>
+                          </div>
+                          <div>
+                            <strong>What's working well:</strong>
+                            <span id="admin-happiness-working">Not submitted yet</span>
+                          </div>
+                          <div>
+                            <strong>Support needs:</strong>
+                            <span id="admin-happiness-support">Not submitted yet</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mentorship-layout">
+                        <div class="card progress-update">
+                          <div class="progress-meta">
+                            <div>
+                              <strong>Leader:</strong> Dr. Lauren Kim
+                            </div>
+                            <div>
+                              <strong>Class of:</strong> 2026
+                            </div>
+                            <div>
+                              <strong>Position:</strong> Instructor
+                            </div>
+                            <div>
+                              <strong>Start Month:</strong> March
+                            </div>
+                            <div>
+                              <strong>This Month:</strong> September
+                            </div>
+                            <div>
+                              <strong>Months in Role:</strong> 7
+                            </div>
+                            <div>
+                              <strong>Day-to-Day Manager:</strong> Jordan Reese
+                            </div>
+                            <div>
+                              <strong>Mentor:</strong> Dr. Lauren Kim
+                            </div>
+                          </div>
+                          <h4>Progress Update</h4>
+                          <div class="progress-scale">
+                            <div>
+                              <strong class="scale-label status-red">Behind schedule</strong>
+                              <span>Incomplete/behind timetable; not possible until catch-up possible</span>
+                            </div>
+                            <div>
+                              <strong class="scale-label status-yellow">Getting started</strong>
+                              <span>Incomplete/behind timetable but catch-up possible</span>
+                            </div>
+                            <div>
+                              <strong class="scale-label status-green">On track</strong>
+                              <span>Complete/in line schedule in both quantity &amp; quality</span>
+                            </div>
+                            <div>
+                              <strong class="scale-label status-purple">Above and beyond</strong>
+                              <span>Exceeding goals in quantity &amp; quality</span>
+                            </div>
+                          </div>
+                          <div class="progress-table">
+                            <div class="progress-row">
+                              <div class="progress-label">Goal 1<br /><span>By Timetable 1</span></div>
+                              <div class="progress-bar is-clickable" style="--progress: 70%;">
+                                <span class="progress-fill status-green"></span>
+                              </div>
+                            </div>
+                            <div class="progress-row">
+                              <div class="progress-label">Goal 2<br /><span>By Timetable 2</span></div>
+                              <div class="progress-bar is-clickable" style="--progress: 55%;">
+                                <span class="progress-fill status-yellow"></span>
+                              </div>
+                            </div>
+                            <div class="progress-row">
+                              <div class="progress-label">Goal 3<br /><span>By Timetable 3</span></div>
+                              <div class="progress-bar is-clickable" style="--progress: 85%;">
+                                <span class="progress-fill status-purple"></span>
+                              </div>
+                            </div>
+                            <div class="progress-row">
+                              <div class="progress-label">Goal 4<br /><span>By Timetable 4</span></div>
+                              <div class="progress-bar is-clickable" style="--progress: 45%;">
+                                <span class="progress-fill status-yellow"></span>
+                              </div>
+                            </div>
+                            <div class="progress-row">
+                              <div class="progress-label">Goal 5<br /><span>By Timetable 5</span></div>
+                              <div class="progress-bar is-clickable" style="--progress: 78%;">
+                                <span class="progress-fill status-green"></span>
+                              </div>
+                            </div>
+                            <div class="progress-row">
+                              <div class="progress-label">Overall<br /><span>Including general expectations</span></div>
+                              <div class="progress-bar is-clickable" style="--progress: 62%;">
+                                <span class="progress-fill status-green"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="progress-comments">
+                            <h5>Comments:</h5>
+                            <p>
+                              Overall impression of progress, what’s worked well and recommended adjustments,
+                              relevant notes from/about colleagues, additional involvements in YPP (events,
+                              recruiting, etc.) [projected future path at YPP and Achievement Awards (as of last
+                              EC review)]
+                            </p>
+                            <textarea rows="3" id="mentor-comments" placeholder="Enter mentor comments."></textarea>
+                          </div>
+                        </div>
+                        <div class="mentorship-side">
+                          <div class="card action-plan-card">
+                            <h4>Future Plan of Action</h4>
+                            <label>
+                              Revisions to future goals (major vision-level changes should be discussed with the
+                              Executive Committee):
+                              <textarea rows="3" id="mentor-goal-revisions" placeholder="Describe revisions to future goals."></textarea>
+                            </label>
+                            <label>
+                              Action Items and Implementation Plan (for larger goals, include specific subgoals
+                              not yet achieved and action plan to achieve them):
+                              <textarea rows="3" id="mentor-action-plan" placeholder="List action items and implementation plan."></textarea>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="button" id="submit-evaluation" type="button">Submit Evaluation</button>
+                      <div class="card evaluation-detail" id="evaluation-detail">
+                        <h4 id="evaluation-title">Evaluation Detail</h4>
+                        <p class="message-meta" id="evaluation-meta">Select a past evaluation to view details.</p>
+                        <div class="progress-table" id="evaluation-progress"></div>
+                        <div class="progress-comments">
+                          <h5>Comments</h5>
+                          <p id="evaluation-comments">No evaluation selected.</p>
+                        </div>
+                        <div class="progress-comments">
+                          <h5>Goal Revisions</h5>
+                          <p id="evaluation-goal-revisions">No evaluation selected.</p>
+                        </div>
+                        <div class="progress-comments">
+                          <h5>Action Plan</h5>
+                          <p id="evaluation-action-plan">No evaluation selected.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="person-admin" class="person-panel">
+                    <div class="section-header">
+                      <h3>Renee Walker (Admin)</h3>
+                      <span class="pill">Super Admin</span>
+                    </div>
+                    <p class="highlight">Admin access includes full CMS and people management.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        Youth Passion Project Admin Portal · Role-based access · Email/password authentication ·
+        Guiding the stars of tomorrow.
+      </footer>
+    </div>
+    <script>
+      const tabButtons = document.querySelectorAll(".primary-tab");
+      const tabSections = document.querySelectorAll(".tab-section");
+
+      const activateTab = (tabName) => {
+        tabButtons.forEach((button) => {
+          button.classList.toggle("active", button.dataset.tab === tabName);
+        });
+        tabSections.forEach((section) => {
+          section.classList.toggle("active", section.dataset.tab === tabName);
+        });
+      };
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => activateTab(button.dataset.tab));
+      });
+
+      const peopleLinks = document.querySelectorAll(".people-link");
+      const peoplePanels = document.querySelectorAll(".person-panel");
+
+      peopleLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          const panelId = link.dataset.person;
+          peopleLinks.forEach((item) => item.classList.toggle("active", item === link));
+          peoplePanels.forEach((panel) =>
+            panel.classList.toggle("active", panel.id === panelId)
+          );
+        });
+      });
+
+      const clickableBars = document.querySelectorAll(".progress-bar.is-clickable");
+      clickableBars.forEach((bar) => {
+        bar.addEventListener("click", (event) => {
+          const rect = bar.getBoundingClientRect();
+          const percent = Math.min(100, Math.max(0, ((event.clientX - rect.left) / rect.width) * 100));
+          bar.style.setProperty("--progress", `${percent.toFixed(0)}%`);
+          const fill = bar.querySelector(".progress-fill");
+          if (fill) {
+            fill.classList.remove("status-red", "status-yellow", "status-green", "status-purple");
+            if (percent < 25) {
+              fill.classList.add("status-red");
+            } else if (percent < 50) {
+              fill.classList.add("status-yellow");
+            } else if (percent < 75) {
+              fill.classList.add("status-green");
+            } else {
+              fill.classList.add("status-purple");
+            }
+          }
+        });
+      });
+
+      const submitButton = document.getElementById("submit-evaluation");
+      const evaluationsList = document.getElementById("past-evaluations");
+      const mentorComments = document.getElementById("mentor-comments");
+      const goalRevisions = document.getElementById("mentor-goal-revisions");
+      const actionPlan = document.getElementById("mentor-action-plan");
+      const evaluationDetail = document.getElementById("evaluation-detail");
+      const evaluationTitle = document.getElementById("evaluation-title");
+      const evaluationMeta = document.getElementById("evaluation-meta");
+      const evaluationComments = document.getElementById("evaluation-comments");
+      const evaluationGoalRevisions = document.getElementById("evaluation-goal-revisions");
+      const evaluationActionPlan = document.getElementById("evaluation-action-plan");
+      const evaluationProgress = document.getElementById("evaluation-progress");
+
+      const loadHappinessSurvey = () => {
+        const saved = JSON.parse(localStorage.getItem("yppHappinessSurvey") || "null");
+        if (!saved) return;
+        const mappings = [
+          ["admin-happiness-rating", saved.rating ? `${saved.rating} / 5` : "Not submitted yet"],
+          ["admin-happiness-accomplishments", saved.accomplishments],
+          ["admin-happiness-collaboration", saved.collaboration],
+          ["admin-happiness-working", saved.workingWell],
+          ["admin-happiness-support", saved.supportNeeds]
+        ];
+        mappings.forEach(([id, value]) => {
+          const el = document.getElementById(id);
+          if (el && value) el.textContent = value;
+        });
+      };
+
+      const renderEvaluationDetail = (evaluation) => {
+        evaluationDetail.classList.add("active");
+        evaluationTitle.textContent = evaluation.title;
+        evaluationMeta.textContent = evaluation.meta;
+        evaluationComments.textContent = evaluation.comments || "No comments provided.";
+        evaluationGoalRevisions.textContent = evaluation.goalRevisions || "No revisions provided.";
+        evaluationActionPlan.textContent = evaluation.actionPlan || "No action plan provided.";
+        evaluationProgress.innerHTML = "";
+        evaluation.progress.forEach((value, index) => {
+          const item = document.createElement("div");
+          item.className = "progress-row";
+          item.innerHTML = `
+            <div class="progress-label">Goal ${index + 1}<br /><span>By Timetable ${index + 1}</span></div>
+            <div class="progress-bar">
+              <span class="progress-fill ${value < 25 ? "status-red" : value < 50 ? "status-yellow" : value < 75 ? "status-green" : "status-purple"}" style="width: ${value}%"></span>
+            </div>
+          `;
+          evaluationProgress.appendChild(item);
+        });
+      };
+
+      const addEvaluationToList = (evaluation, prepend = false) => {
+        const listItem = document.createElement("li");
+        const link = document.createElement("button");
+        link.type = "button";
+        link.className = "evaluation-link";
+        link.textContent = evaluation.title;
+        link.addEventListener("click", () => renderEvaluationDetail(evaluation));
+        listItem.appendChild(link);
+        if (prepend) {
+          evaluationsList.prepend(listItem);
+        } else {
+          evaluationsList.appendChild(listItem);
+        }
+      };
+
+      const defaultEvaluations = [
+        {
+          title: "August: On track in curriculum delivery",
+          meta: "Submitted Aug 28, 2026",
+          comments: "Consistent pacing and timely curriculum updates.",
+          goalRevisions: "Continue with current pacing improvements.",
+          actionPlan: "Finalize week 6 assessments and share with CP.",
+          progress: [70, 55, 85, 45, 78]
+        },
+        {
+          title: "July: Getting started on community showcase",
+          meta: "Submitted Jul 28, 2026",
+          comments: "Showcase planning needs a venue confirmation.",
+          goalRevisions: "Align showcase timeline with school calendar.",
+          actionPlan: "Confirm venue and draft student presentation outline.",
+          progress: [60, 40, 70, 35, 65]
+        },
+        {
+          title: "June: Above and beyond in student retention",
+          meta: "Submitted Jun 28, 2026",
+          comments: "Strong retention and parent engagement this month.",
+          goalRevisions: "Expand parent volunteer pipeline.",
+          actionPlan: "Host parent info session and gather interest forms.",
+          progress: [80, 60, 90, 55, 82]
+        }
+      ];
+
+      defaultEvaluations.forEach((evaluation) => addEvaluationToList(evaluation));
+
+      const storedEvaluation = JSON.parse(localStorage.getItem("yppMentorEvaluation") || "null");
+      if (storedEvaluation) {
+        addEvaluationToList(storedEvaluation, true);
+      }
+
+      submitButton.addEventListener("click", () => {
+        const date = new Date();
+        const monthLabel = date.toLocaleString("default", { month: "long" });
+        const comment = mentorComments.value.trim();
+        const summary = comment
+          ? `${monthLabel}: ${comment.slice(0, 60)}${comment.length > 60 ? "…" : ""}`
+          : `${monthLabel}: New mentorship evaluation submitted`;
+
+        const progressValues = Array.from(document.querySelectorAll(".progress-bar.is-clickable")).map(
+          (bar) => parseFloat(getComputedStyle(bar).getPropertyValue("--progress")) || 0
+        );
+
+        const evaluation = {
+          title: summary,
+          meta: `Submitted ${monthLabel} ${date.getDate()}, ${date.getFullYear()}`,
+          comments: comment,
+          goalRevisions: goalRevisions.value.trim(),
+          actionPlan: actionPlan.value.trim(),
+          progress: progressValues.slice(0, 5)
+        };
+
+        localStorage.setItem("yppMentorEvaluation", JSON.stringify(evaluation));
+
+        addEvaluationToList(evaluation, true);
+        mentorComments.value = "";
+        goalRevisions.value = "";
+        actionPlan.value = "";
+        renderEvaluationDetail(evaluation);
+      });
+
+      activateTab("people");
+      loadHappinessSurvey();
+    </script>
+  </body>
+</html>

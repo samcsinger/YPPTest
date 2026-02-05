@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youth Passion Project Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-nav">
+        <div class="logo-block">
+          <div class="role-chip">Instructor Portal</div>
+        </div>
+        <div class="top-actions">
+          <button class="button ghost" type="button" data-tab="notifications">Notifications</button>
+          <a class="button" href="login.html">Log Out</a>
+        </div>
+      </header>
+      <nav class="primary-tabs" aria-label="Instructor portal tabs">
+        <button class="primary-tab active" data-tab="profile" type="button">Profile</button>
+        <button class="primary-tab" data-tab="training" type="button">Training & Curriculum</button>
+        <button class="primary-tab" data-tab="courses" type="button">Courses</button>
+        <button class="primary-tab" data-tab="mentorship" type="button">Monthly Reflection</button>
+        <button class="primary-tab" data-tab="community" type="button">Community</button>
+        <button class="primary-tab" data-tab="special-programming" type="button">Special Programming</button>
+        <button class="primary-tab" data-tab="alumni" type="button">Alumni & Advisors</button>
+        <button class="primary-tab" data-tab="notifications" type="button">Notifications</button>
+      </nav>
+
+      <main class="main-content">
+        <div class="content-stack">
+          <section id="profile" class="tab-section active" data-tab="profile">
+            <div class="section-block hero">
+              <div>
+                <h1>Welcome back, Instructor Maya!</h1>
+                <p>
+                  Here is your personalized portal for guiding the stars of tomorrow. Each tab below
+                  maps to a complete workflow for your instructor role.
+                </p>
+              </div>
+              <div class="badge-row">
+                <span class="badge">Chapter: Northside STEM</span>
+                <span class="badge">Mentor: Dr. Lauren Kim</span>
+                <span class="badge">Status: Active Instructor</span>
+                <span class="badge">Next Interview Slot: Aug 12, 4:00 PM</span>
+              </div>
+            </div>
+            <div class="section-block">
+              <div class="section-header">
+                <h2>Instructor Profile</h2>
+                <span class="pill">Editable by Instructor</span>
+              </div>
+              <div class="panel-grid">
+                <div class="card">
+                  <h4>Biographical Information</h4>
+                  <form class="form-grid">
+                    <label>
+                      Full Name
+                      <input type="text" value="Maya Johnson" readonly />
+                    </label>
+                    <label>
+                      Email
+                      <input type="email" value="maya@ypp.org" readonly />
+                    </label>
+                    <label>
+                      Phone
+                      <input type="tel" value="(555) 201-3341" readonly />
+                    </label>
+                    <label class="span-two">
+                      Bio
+                      <textarea rows="3" readonly>I love helping students build creative tech projects.</textarea>
+                    </label>
+                  </form>
+                  <button class="button" disabled>Save Profile</button>
+                </div>
+                <div class="card">
+                  <h4>Instructor Details</h4>
+                  <ul class="list">
+                    <li>Course: Creative Coding 101</li>
+                    <li>Mentor: Dr. Lauren Kim</li>
+                    <li>Curriculum Link: ypp.org/curriculum/maya</li>
+                  </ul>
+                  <label class="upload">
+                    Upload updated resume or bio
+                    <input type="file" />
+                  </label>
+                  <button class="button ghost">Submit Update</button>
+                </div>
+              </div>
+              <div class="card">
+                <h4>Admin Announcements</h4>
+                <p class="highlight">New: Submit your fall curriculum updates by August 30.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="training" class="tab-section" data-tab="training">
+            <div class="section-block">
+              <div class="section-header">
+                <h2>Training & Curriculum</h2>
+                <span class="pill">Instructor Training Program</span>
+              </div>
+              <div class="panel-grid">
+                <div class="card">
+                  <h4>Training Checklist</h4>
+                  <ul class="list">
+                    <li>Module 1: YPP Mission & Values ✅</li>
+                    <li>Module 2: Youth Safety ✅</li>
+                    <li>Module 3: Lesson Planning ✅</li>
+                    <li>Module 4: Classroom Practice ✅</li>
+                    <li>Module 5: Accessibility ⏳</li>
+                    <li>Module 6: Assessment ⏳</li>
+                  </ul>
+                  <button class="button ghost">Resume Training</button>
+                </div>
+                <div class="card">
+                  <h4>Curriculum Submission</h4>
+                  <form class="form-grid">
+                    <label class="span-two">
+                      Curriculum Link
+                      <input type="url" placeholder="https://..." />
+                    </label>
+                    <label class="span-two">
+                      Upload Lesson Plan
+                      <input type="file" />
+                    </label>
+                    <label class="span-two">
+                      Notes to Admin
+                      <textarea rows="3" placeholder="Add any context for reviewers."></textarea>
+                    </label>
+                  </form>
+                  <button class="button">Submit Curriculum</button>
+                </div>
+              </div>
+              <div class="card">
+                <h4>Feedback & Revisions</h4>
+                <p class="highlight">
+                  Feedback received: “Strengthen assessment criteria for week 3 and add a rubric.”
+                </p>
+                <button class="button ghost">Upload Revision</button>
+              </div>
+            </div>
+          </section>
+
+          <section id="courses" class="tab-section" data-tab="courses">
+            <div class="section-block">
+              <div class="section-header">
+                <h2>Courses</h2>
+                <span class="pill">Enrollment & Feedback</span>
+              </div>
+              <div class="panel-grid">
+                <div class="card">
+                  <h4>Student Enrollment</h4>
+                  <ul class="list">
+                    <li>Creative Coding 101 — 18 students</li>
+                    <li>Engineering Pathways — 12 students</li>
+                  </ul>
+                  <label class="upload">
+                    Upload roster update
+                    <input type="file" />
+                  </label>
+                </div>
+                <div class="card">
+                  <h4>Parent Feedback</h4>
+                  <p class="highlight">Average rating: 4.7 / 5</p>
+                  <textarea rows="3" placeholder="Write a response or follow-up note."></textarea>
+                  <button class="button ghost">Send Response</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="mentorship" class="tab-section" data-tab="mentorship">
+            <div class="section-block">
+              <div class="section-header">
+                <h2>Monthly Reflection</h2>
+                <span class="pill">Progress Update • Happiness • Future Plan</span>
+              </div>
+              <div class="panel-grid">
+                <div class="card">
+                  <h4>Mentor Contact</h4>
+                  <p class="highlight">Dr. Lauren Kim · lauren@ypp.org · (555) 220-9801</p>
+                  <button class="button ghost">Message Mentor</button>
+                </div>
+                <div class="card">
+                  <h4>Instructor Goals</h4>
+                  <ul class="list">
+                    <li>Goal 1: Increase student retention to 90%</li>
+                    <li>Goal 2: Launch one community showcase per term</li>
+                    <li>Goal 3: Build parent volunteer pipeline</li>
+                    <li>Goal 4: Strengthen student project portfolios</li>
+                    <li>Goal 5: Expand chapter community partnerships</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mentorship-layout">
+                <div class="card progress-update">
+                  <div class="progress-meta">
+                    <div>
+                      <strong>Leader:</strong> Dr. Lauren Kim
+                    </div>
+                    <div>
+                      <strong>Class of:</strong> 2026
+                    </div>
+                    <div>
+                      <strong>Position:</strong> Instructor
+                    </div>
+                    <div>
+                      <strong>Start Month:</strong> March
+                    </div>
+                    <div>
+                      <strong>This Month:</strong> September
+                    </div>
+                    <div>
+                      <strong>Months in Role:</strong> 7
+                    </div>
+                    <div>
+                      <strong>Day-to-Day Manager:</strong> Jordan Reese
+                    </div>
+                    <div>
+                      <strong>Mentor:</strong> Dr. Lauren Kim
+                    </div>
+                  </div>
+                  <h4>Progress Update</h4>
+                  <div class="progress-scale">
+                    <div>
+                      <strong class="scale-label status-red">Behind schedule</strong>
+                      <span>Incomplete/behind timetable; not possible until catch-up possible</span>
+                    </div>
+                    <div>
+                      <strong class="scale-label status-yellow">Getting started</strong>
+                      <span>Incomplete/behind timetable but catch-up possible</span>
+                    </div>
+                    <div>
+                      <strong class="scale-label status-green">On track</strong>
+                      <span>Complete/in line schedule in both quantity &amp; quality</span>
+                    </div>
+                    <div>
+                      <strong class="scale-label status-purple">Above and beyond</strong>
+                      <span>Exceeding goals in quantity &amp; quality</span>
+                    </div>
+                  </div>
+                  <div class="progress-table">
+                    <div class="progress-row">
+                      <div class="progress-label">Goal 1<br /><span>By Timetable 1</span></div>
+                      <div class="progress-bar" style="--progress: 70%;">
+                        <span class="progress-fill status-green"></span>
+                      </div>
+                    </div>
+                    <div class="progress-row">
+                      <div class="progress-label">Goal 2<br /><span>By Timetable 2</span></div>
+                      <div class="progress-bar" style="--progress: 55%;">
+                        <span class="progress-fill status-yellow"></span>
+                      </div>
+                    </div>
+                    <div class="progress-row">
+                      <div class="progress-label">Goal 3<br /><span>By Timetable 3</span></div>
+                      <div class="progress-bar" style="--progress: 85%;">
+                        <span class="progress-fill status-purple"></span>
+                      </div>
+                    </div>
+                    <div class="progress-row">
+                      <div class="progress-label">Goal 4<br /><span>By Timetable 4</span></div>
+                      <div class="progress-bar" style="--progress: 45%;">
+                        <span class="progress-fill status-yellow"></span>
+                      </div>
+                    </div>
+                    <div class="progress-row">
+                      <div class="progress-label">Goal 5<br /><span>By Timetable 5</span></div>
+                      <div class="progress-bar" style="--progress: 78%;">
+                        <span class="progress-fill status-green"></span>
+                      </div>
+                    </div>
+                    <div class="progress-row">
+                      <div class="progress-label">Overall<br /><span>Including general expectations</span></div>
+                      <div class="progress-bar" style="--progress: 62%;">
+                        <span class="progress-fill status-green"></span>
+                      </div>
+                    </div>
+                  </div>
+                          <div class="progress-comments">
+                            <h5>Comments:</h5>
+                            <p>
+                              Overall impression of progress, what’s worked well and recommended adjustments,
+                              relevant notes from/about colleagues, additional involvements in YPP (events,
+                              recruiting, etc.) [projected future path at YPP and Achievement Awards (as of last
+                              EC review)]
+                            </p>
+                            <textarea
+                              rows="3"
+                              readonly
+                              disabled
+                              id="instructor-mentor-comments"
+                            >
+Mentor will enter comments here after the review.</textarea
+                            >
+                          </div>
+                        </div>
+                        <div class="mentorship-side">
+                          <div class="card happiness-card">
+                            <h4>Your Happiness in YPP</h4>
+                            <p class="due-date">Next happiness check-in due: Oct 5</p>
+                            <label class="rating-label">How happy are you at YPP? (bold one)</label>
+                            <div class="rating-scale">
+                              <label><input type="radio" name="happiness" value="1" /> 1</label>
+                              <label><input type="radio" name="happiness" value="2" /> 2</label>
+                              <label><input type="radio" name="happiness" value="3" /> 3</label>
+                              <label><input type="radio" name="happiness" value="4" /> 4</label>
+                              <label><input type="radio" name="happiness" value="5" /> 5</label>
+                            </div>
+                            <label>
+                              What did you accomplish this month?
+                              <textarea
+                                rows="2"
+                                id="happiness-accomplishments"
+                                placeholder="Share your key accomplishments."
+                              ></textarea>
+                            </label>
+                            <label>
+                              How was your experience with the people you worked with?
+                              <textarea
+                                rows="2"
+                                id="happiness-collaboration"
+                                placeholder="Share your experience with collaborators."
+                              ></textarea>
+                            </label>
+                            <label>
+                              What’s working well for you?
+                              <textarea
+                                rows="2"
+                                id="happiness-working"
+                                placeholder="Share what is going well."
+                              ></textarea>
+                            </label>
+                            <label>
+                              What support or changes would help you succeed in this role and beyond YPP?
+                              <textarea
+                                rows="2"
+                                id="happiness-support"
+                                placeholder="Share support needs."
+                              ></textarea>
+                            </label>
+                            <button class="button" id="submit-happiness" type="button">
+                              Submit Happiness Survey
+                            </button>
+                            <p class="helper-text">To be completed by mentor: Progress update + future plan.</p>
+                          </div>
+                          <div class="card action-plan-card">
+                            <h4>Future Plan of Action</h4>
+                            <label>
+                              Revisions to future goals (major vision-level changes should be discussed with the
+                              Executive Committee):
+                              <textarea rows="3" readonly disabled id="instructor-goal-revisions">
+To be completed by mentor.</textarea
+                              >
+                            </label>
+                            <label>
+                              Action Items and Implementation Plan (for larger goals, include specific subgoals
+                              not yet achieved and action plan to achieve them):
+                              <textarea rows="3" readonly disabled id="instructor-action-plan">
+To be completed by mentor.</textarea
+                              >
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          </section>
+
+          <section id="community" class="tab-section" data-tab="community">
+            <div class="section-block">
+              <div class="section-header">
+                <h2>Community</h2>
+                <span class="pill">Events & Programming</span>
+              </div>
+              <div class="card">
+                <ul class="list">
+                  <li>YPP Community Town Hall — Virtual</li>
+                  <li>Passion Lab Showcase — Sept 12</li>
+                  <li>Instructor Circle — Thursdays, 6 PM</li>
+                </ul>
+                <button class="button ghost">RSVP</button>
+              </div>
+            </div>
+          </section>
+
+          <section id="special-programming" class="tab-section" data-tab="special-programming">
+            <div class="section-block">
+              <div class="section-header">
+                <h2>Special Programming</h2>
+                <span class="pill">Sequenced Classes & Opportunities</span>
+              </div>
+              <div class="panel-grid">
+                <div class="card">
+                  <h4>Submit Virtual Programming</h4>
+                  <form class="form-grid">
+                    <label class="span-two">
+                      Interest Area
+                      <input type="text" placeholder="Creative Tech" />
+                    </label>
+                    <label class="span-two">
+                      Program Description
+                      <textarea rows="3" placeholder="Describe the sequenced classes or experience."></textarea>
+                    </label>
+                    <label class="span-two">
+                      Upload Outline
+                      <input type="file" />
+                    </label>
+                  </form>
+                  <button class="button">Submit Program</button>
+                </div>
+                <div class="card">
+                  <h4>Existing Programs</h4>
+                  <ul class="list">
+                    <li>Passion Lab: Sustainable Design (Virtual)</li>
+                    <li>Competition Prep Workshop</li>
+                    <li>Creative Tech Mentorship Sessions</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="alumni" class="tab-section" data-tab="alumni">
+            <div class="section-block">
+              <div class="section-header">
+                <h2>Alumni & Advisors</h2>
+                <span class="pill">Awards Required</span>
+              </div>
+              <div class="panel-grid">
+                <div class="card">
+                  <h4>Alumni Directory</h4>
+                  <p>
+                    Alumni programming is available to instructors who receive the Bronze Instructor
+                    Award.
+                  </p>
+                  <button class="button ghost">View Eligibility</button>
+                </div>
+                <div class="card">
+                  <h4>College Advisors</h4>
+                  <p>
+                    College Advisors are available to instructors who receive the Silver Instructor
+                    Award.
+                  </p>
+                  <button class="button ghost">Request Advisor</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="notifications" class="tab-section" data-tab="notifications">
+            <div class="section-block">
+              <div class="section-header">
+                <h2>Leadership Team Messages</h2>
+                <span class="pill">Notifications Inbox</span>
+              </div>
+              <div class="panel-grid">
+                <div class="card message-list">
+                  <h4>Inbox</h4>
+                  <button class="message-link active" data-message="message-1" type="button">
+                    Curriculum review reminder
+                  </button>
+                  <button class="message-link" data-message="message-2" type="button">
+                    Chapter update: Fall showcase logistics
+                  </button>
+                  <button class="message-link" data-message="message-3" type="button">
+                    Mentor feedback follow-up
+                  </button>
+                </div>
+                <div class="card message-detail">
+                  <div id="message-1" class="message-body active">
+                    <h4>Curriculum review reminder</h4>
+                    <p class="message-meta">From: Leadership Team · Sept 12</p>
+                    <p>
+                      Hi Maya — a reminder that curriculum updates are due by August 30. Please upload
+                      the updated lesson plan and include any notes for reviewers.
+                    </p>
+                  </div>
+                  <div id="message-2" class="message-body">
+                    <h4>Chapter update: Fall showcase logistics</h4>
+                    <p class="message-meta">From: Leadership Team · Sept 15</p>
+                    <p>
+                      Please confirm your student roster and availability for the Fall showcase. We
+                      will finalize the schedule next week.
+                    </p>
+                  </div>
+                  <div id="message-3" class="message-body">
+                    <h4>Mentor feedback follow-up</h4>
+                    <p class="message-meta">From: Leadership Team · Sept 18</p>
+                    <p>
+                      Your mentor will review the monthly reflection this Friday. If you need support
+                      before then, reply to this message.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        Youth Passion Project Portal · Role-based access · Email/password authentication ·
+        Admin tools for CMS-style updates
+      </footer>
+    </div>
+    <script>
+      const tabButtons = document.querySelectorAll(".primary-tab");
+      const tabSections = document.querySelectorAll(".tab-section");
+      const notificationButtons = document.querySelectorAll('[data-tab="notifications"]');
+
+      const activateTab = (tabName) => {
+        tabButtons.forEach((button) => {
+          button.classList.toggle("active", button.dataset.tab === tabName);
+        });
+        tabSections.forEach((section) => {
+          section.classList.toggle("active", section.dataset.tab === tabName);
+        });
+      };
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => activateTab(button.dataset.tab));
+      });
+
+      notificationButtons.forEach((button) => {
+        button.addEventListener("click", () => activateTab("notifications"));
+      });
+
+      const messageLinks = document.querySelectorAll(".message-link");
+      const messageBodies = document.querySelectorAll(".message-body");
+
+      messageLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          const messageId = link.dataset.message;
+          messageLinks.forEach((item) => item.classList.toggle("active", item === link));
+          messageBodies.forEach((body) =>
+            body.classList.toggle("active", body.id === messageId)
+          );
+        });
+      });
+
+      const loadHappinessSurvey = () => {
+        const saved = JSON.parse(localStorage.getItem("yppHappinessSurvey") || "null");
+        if (!saved) return;
+        const ratingInput = document.querySelector(`input[name=\"happiness\"][value=\"${saved.rating}\"]`);
+        if (ratingInput) ratingInput.checked = true;
+        const fields = {
+          "happiness-accomplishments": saved.accomplishments,
+          "happiness-collaboration": saved.collaboration,
+          "happiness-working": saved.workingWell,
+          "happiness-support": saved.supportNeeds
+        };
+        Object.entries(fields).forEach(([id, value]) => {
+          const el = document.getElementById(id);
+          if (el) el.value = value || "";
+        });
+      };
+
+      const updateProgressFill = (bar, value) => {
+        const fill = bar.querySelector(".progress-fill");
+        if (!fill) return;
+        fill.classList.remove("status-red", "status-yellow", "status-green", "status-purple");
+        if (value < 25) {
+          fill.classList.add("status-red");
+        } else if (value < 50) {
+          fill.classList.add("status-yellow");
+        } else if (value < 75) {
+          fill.classList.add("status-green");
+        } else {
+          fill.classList.add("status-purple");
+        }
+      };
+
+      const loadMentorEvaluation = () => {
+        const evaluation = JSON.parse(localStorage.getItem("yppMentorEvaluation") || "null");
+        if (!evaluation) return;
+        const comments = document.getElementById("instructor-mentor-comments");
+        const revisions = document.getElementById("instructor-goal-revisions");
+        const plan = document.getElementById("instructor-action-plan");
+        if (comments) comments.value = evaluation.comments || "";
+        if (revisions) revisions.value = evaluation.goalRevisions || "";
+        if (plan) plan.value = evaluation.actionPlan || "";
+        if (evaluation.progress && Array.isArray(evaluation.progress)) {
+          const bars = document.querySelectorAll("#mentorship .progress-bar");
+          evaluation.progress.forEach((value, index) => {
+            const bar = bars[index];
+            if (bar) {
+              bar.style.setProperty("--progress", `${value}%`);
+              updateProgressFill(bar, value);
+            }
+          });
+        }
+      };
+
+      const submitHappinessButton = document.getElementById("submit-happiness");
+      submitHappinessButton?.addEventListener("click", () => {
+        const rating = document.querySelector("input[name=\"happiness\"]:checked")?.value || "";
+        const payload = {
+          rating,
+          accomplishments: document.getElementById("happiness-accomplishments")?.value || "",
+          collaboration: document.getElementById("happiness-collaboration")?.value || "",
+          workingWell: document.getElementById("happiness-working")?.value || "",
+          supportNeeds: document.getElementById("happiness-support")?.value || "",
+          submittedAt: new Date().toISOString()
+        };
+        localStorage.setItem("yppHappinessSurvey", JSON.stringify(payload));
+      });
+
+      activateTab("profile");
+      loadHappinessSurvey();
+      loadMentorEvaluation();
+    </script>
+  </body>
+</html>
