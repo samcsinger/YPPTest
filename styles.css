@@ -353,6 +353,16 @@ html {
   margin-bottom: 4px;
 }
 
+.scale-label {
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
 .progress-table {
   display: grid;
   gap: 12px;
@@ -487,6 +497,24 @@ html {
   gap: 6px;
   font-weight: 600;
   color: var(--ypp-muted);
+}
+
+.due-date {
+  margin: 0 0 8px;
+  color: #e05a63;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+textarea[readonly],
+input[readonly] {
+  background: #f4f3ff;
+  color: var(--ypp-muted);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .footer {
