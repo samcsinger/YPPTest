@@ -98,7 +98,7 @@ html {
 
 .main-content {
   gap: 24px;
-  padding: 32px;
+  padding: 24px 32px 32px;
   display: grid;
   grid-template-columns: 240px 1fr;
   align-items: start;
@@ -312,44 +312,102 @@ html {
   font-size: 14px;
 }
 
-.progress-card {
+.mentorship-layout {
   display: grid;
-  gap: 12px;
+  gap: 20px;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
 }
 
-.progress-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+.progress-update h4 {
+  margin-bottom: 12px;
 }
 
-.progress-track {
+.progress-meta {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px 16px;
+  font-size: 13px;
+  color: var(--ypp-muted);
+  background: rgba(237, 235, 255, 0.6);
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
 }
 
-.progress-segment {
-  height: 10px;
-  border-radius: 999px;
-  opacity: 0.35;
+.progress-meta strong {
+  color: var(--ypp-ink);
 }
 
-.progress-segment.active {
-  opacity: 1;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
-}
-
-.status-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 4px 10px;
-  border-radius: 999px;
+.progress-scale {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
   font-size: 12px;
+  color: var(--ypp-muted);
+  margin-bottom: 16px;
+}
+
+.progress-scale strong {
+  display: block;
+  color: var(--ypp-ink);
+  margin-bottom: 4px;
+}
+
+.progress-table {
+  display: grid;
+  gap: 12px;
+}
+
+.progress-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 160px) 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.progress-label {
   font-weight: 700;
-  color: #ffffff;
+  font-size: 13px;
+}
+
+.progress-label span {
+  font-weight: 500;
+  color: var(--ypp-muted);
+  font-size: 12px;
+}
+
+.progress-bar {
+  position: relative;
+  height: 12px;
+  border-radius: 999px;
+  background: #e6e0f3;
+  overflow: hidden;
+}
+
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(224, 90, 99, 0.35) 0%,
+    rgba(224, 90, 99, 0.35) 25%,
+    rgba(241, 182, 80, 0.35) 25%,
+    rgba(241, 182, 80, 0.35) 50%,
+    rgba(76, 196, 141, 0.35) 50%,
+    rgba(76, 196, 141, 0.35) 75%,
+    rgba(106, 93, 224, 0.35) 75%,
+    rgba(106, 93, 224, 0.35) 100%
+  );
+}
+
+.progress-fill {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: var(--progress, 50%);
+  border-radius: inherit;
+  z-index: 1;
 }
 
 .status-red {
@@ -366,6 +424,69 @@ html {
 
 .status-purple {
   background: #6a5de0;
+}
+
+.progress-comments {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--ypp-muted);
+}
+
+.progress-comments h5 {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ypp-ink);
+}
+
+.progress-comments textarea {
+  border-radius: 10px;
+  border: 1px solid var(--ypp-border);
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.mentorship-side {
+  display: grid;
+  gap: 20px;
+}
+
+.happiness-card label,
+.action-plan-card label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--ypp-ink);
+  margin-top: 12px;
+}
+
+.happiness-card textarea,
+.action-plan-card textarea {
+  border-radius: 10px;
+  border: 1px solid var(--ypp-border);
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.rating-label {
+  font-weight: 600;
+  color: var(--ypp-ink);
+}
+
+.rating-scale {
+  display: flex;
+  gap: 12px;
+  margin: 8px 0 4px;
+  flex-wrap: wrap;
+}
+
+.rating-scale label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--ypp-muted);
 }
 
 .footer {
@@ -557,5 +678,13 @@ html {
 
   .form-grid .span-two {
     grid-column: span 1;
+  }
+
+  .mentorship-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-row {
+    grid-template-columns: 1fr;
   }
 }
