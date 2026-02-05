@@ -361,6 +361,7 @@ html {
   align-items: center;
   justify-content: center;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .progress-table {
@@ -507,7 +508,9 @@ html {
 }
 
 textarea[readonly],
-input[readonly] {
+textarea:disabled,
+input[readonly],
+input:disabled {
   background: #f4f3ff;
   color: var(--ypp-muted);
 }
