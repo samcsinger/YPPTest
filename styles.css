@@ -1,7 +1,10 @@
 :root {
   color-scheme: light;
   --ypp-purple: #4c44cc;
+  --ypp-purple-dark: #3a2d92;
+  --ypp-purple-soft: #6a5de0;
   --ypp-lavender: #edebff;
+  --ypp-lavender-soft: #f6f4ff;
   --ypp-ink: #1c1c1c;
   --ypp-muted: #6f6f8d;
   --ypp-border: #e3e3f5;
@@ -16,8 +19,15 @@
 
 body {
   margin: 0;
-  background: #f8f8ff;
+  background: radial-gradient(circle at top right, rgba(237, 235, 255, 0.9), transparent 40%),
+    radial-gradient(circle at 20% 20%, rgba(106, 93, 224, 0.2), transparent 55%),
+    linear-gradient(160deg, #ffffff 0%, #f6f4ff 45%, #f1efff 100%);
   color: var(--ypp-ink);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 140px;
 }
 
 .app-shell {
@@ -27,8 +37,9 @@ body {
 }
 
 .top-nav {
-  background: #ffffff;
-  border-bottom: 1px solid var(--ypp-border);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(227, 227, 245, 0.7);
   padding: 16px 32px;
   display: flex;
   align-items: center;
@@ -46,8 +57,7 @@ body {
 }
 
 .logo-block img {
-  height: 60px;
-  height: 56px;
+  height: 52px;
 }
 
 .role-chip {
@@ -209,6 +219,7 @@ body {
 .section-block {
   display: grid;
   gap: 16px;
+  scroll-margin-top: 140px;
 }
 
 .section-header {
@@ -306,19 +317,55 @@ body {
   gap: 12px;
 }
 
-.progress-bar {
-  background: rgba(237, 235, 255, 0.9);
-  border-radius: 999px;
-  height: 8px;
-  position: relative;
-  overflow: hidden;
+.progress-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
-.progress-bar span {
-  display: block;
-  height: 100%;
-  background: linear-gradient(90deg, var(--ypp-purple), var(--ypp-purple-soft));
-  width: 72%;
+.progress-track {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.progress-segment {
+  height: 10px;
+  border-radius: 999px;
+  opacity: 0.35;
+}
+
+.progress-segment.active {
+  opacity: 1;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.status-red {
+  background: #e05a63;
+}
+
+.status-yellow {
+  background: #f1b650;
+}
+
+.status-green {
+  background: #4cc48d;
+}
+
+.status-purple {
+  background: #6a5de0;
 }
 
 .footer {
