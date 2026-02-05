@@ -629,6 +629,36 @@ button:disabled {
   display: grid;
 }
 
+.evaluation-link {
+  border: none;
+  background: none;
+  color: var(--ypp-purple-dark);
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
+.evaluation-detail {
+  display: none;
+  gap: 12px;
+}
+
+.evaluation-detail.active {
+  display: grid;
+}
+
+.response-grid {
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ypp-muted);
+}
+
+.response-grid strong {
+  color: var(--ypp-ink);
+}
+
 .auth-form small {
   color: var(--ypp-muted);
   font-size: 12px;
